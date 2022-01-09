@@ -1,0 +1,23 @@
+form, form>div {
+    display: flex;
+}
+
+form {
+    flex-direction: column;
+    margin: 0 30% 0 30%;
+}
+
+input, select {
+    margin-bottom: 20px;
+}
+
+input[type='checkbox'] {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+@media (max-width: 800px) {
+    form {
+        margin: 0 5% 0 5%;
+    }
+}

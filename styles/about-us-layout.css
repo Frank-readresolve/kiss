@@ -1,0 +1,30 @@
+article>div {
+    display: flex;
+}
+
+article:first-of-type>div>p {
+    margin: 0 0 0 20px;
+}
+
+article:last-of-type>div>p {
+    margin: 0 20px 0 0;
+}
+
+@media (max-width: 800px) {
+    article:first-of-type>div {
+        flex-direction: column;
+    }
+
+    article:last-of-type>div {
+        flex-direction: column-reverse;
+    }
+
+
+    article:first-of-type>div>p {
+        margin: 20px 0 0 0;
+    }
+
+    article:last-of-type>div>p {
+        margin: 20px 0 0 0;
+    }
+}

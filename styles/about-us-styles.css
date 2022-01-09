@@ -1,0 +1,9 @@
+article>div>img {
+    height: 200px;
+}
+
+@media (max-width: 800px) {
+    article>div>img {
+        height: initial;
+    }
+}

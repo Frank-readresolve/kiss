@@ -1,0 +1,32 @@
+main>section>h4 {
+    margin-bottom: 0;
+}
+
+form {
+    flex-direction: row;
+    margin: 0;
+}
+
+form>div {
+    flex-direction: column;
+    flex: 1;
+    margin-right: 5px;
+}
+
+form>div:last-child {
+    margin-right: 0;
+}
+
+input, select {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+    form {
+        flex-direction: column;
+    }
+
+    form, form>div {
+        margin: 0;
+    }
+}

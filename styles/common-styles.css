@@ -1,0 +1,84 @@
+/* Importer les polices ici au lieu de head dans le document evite l'importation explicite dans chaque document */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+/*
+    On peut declarer des variables en CSS
+    Pratique pour les couleurs notamment
+    Ci-dessous 2 variables prefixees par "--"
+    Pour utiliser la variable "var(--nom)"
+    :root pour que la portee des variables soient dans tout le document
+*/
+:root {
+    --primary-color: red;
+    --text-color: black;
+}
+
+body {
+    margin: 10px;
+}
+
+h1, h2, h3, h4, li, p, th, td {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: .8em;
+}
+
+h1, h2, h3, h4, th {
+    font-weight: 500;
+}
+
+/*
+    Redefinition des tailels par defaut des titres
+    Penser a rester coherent avec des tailles differentes en fontion du niveau de titre
+*/
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: var(--text-color);
+}
+
+.material-icons {
+    font-size: 1.2em;
+}
+
+a:hover, header>nav>ul>li:after, .material-icons {
+    color: var(--primary-color);
+}
+
+/* content permet d'inserer un objet, typiquement un caractere separateur */
+header>nav>ul>li:after {
+    content: '|';
+    font-weight: bold;
+}
+
+header>nav>ul>li:last-child:after {
+    content: none;
+}
+
+footer {
+    padding-top: 20px;
+    border-top: 2px solid var(--primary-color);
+}
+
+footer>p {
+    text-align: center;
+}

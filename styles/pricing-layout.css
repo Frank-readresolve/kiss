@@ -1,0 +1,54 @@
+section>div {
+    display: flex;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 5px;
+}
+
+article:last-child {
+    margin-right: 0;
+}
+
+article>button {
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+td, th {
+    width: 10%;
+}
+
+thead>tr>th:first-of-type, tbody>tr>th:first-of-type {
+    width: 70%;
+}
+
+@media (max-width: 800px) {
+    section>div {
+        flex-direction: column;
+    }
+
+    article {
+        margin: 0 0 5px 0;
+    }
+
+    article:last-child {
+        margin-bottom: 0;
+    }
+
+    td, th {
+        width: 15%;
+    }
+
+    thead>tr>th:first-of-type, tbody>tr>th:first-of-type {
+        width: 55%;
+    }
+
+}

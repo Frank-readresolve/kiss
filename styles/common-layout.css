@@ -1,0 +1,72 @@
+#container, #container>*, header>nav>ul {
+    display: flex;
+}
+
+#container, main {
+    flex-direction: column;
+}
+
+#container {
+    align-items: center;
+}
+
+#container>* {
+    max-width: 1200px;
+    width: 100%;
+}
+
+header, footer>nav>ul>li {
+    line-height: 1.5rem;
+}
+
+header>img {
+    height: 1.5em;
+}
+
+/*
+    margin-* en auto permet de deplacer a l'oppose un item dans un conteneur flex
+    Ici on demande de "coller" à droite le deuxieme nav du header
+    En savoir plus : https://css-tricks.com/the-peculiar-magic-of-flexbox-and-auto-margins/
+*/
+header>nav:last-child {
+    margin-left: auto;
+}
+
+header>img {
+    align-self: center;
+}
+
+header>nav>ul:first-child {
+    margin-left: 8px;
+}
+
+header>nav>ul>li:after {
+    margin: 0 5px 0 5px;
+}
+
+ul {
+    margin: 0;
+}
+
+footer {
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+footer>p {
+    flex-basis: 100%;
+}
+
+footer>nav {
+    margin-left: 25px;
+}
+
+footer>nav:first-child {
+    margin-left: 0;
+}
+
+@media (max-width: 800px) {
+    header>img {
+        height: 1em;
+    }
+}
